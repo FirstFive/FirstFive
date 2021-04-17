@@ -12,7 +12,7 @@ import FormItem from '@vkontakte/vkui/dist/components/FormItem/FormItem';
 import SliderSwitch from '@vkontakte/vkui/dist/components/SliderSwitch/SliderSwitch';
 
 
-const Home = ({id, go, fetchedUser, go_prog, go_meshi,go_cours, role, o, f_r}) => (
+const Home = ({id, go, fetchedUser, go_prog, go_cours, role, o, f_r}) => (
     <Panel id={id}>
 
         {(!role && fetchedUser) &&
@@ -68,7 +68,6 @@ const Home = ({id, go, fetchedUser, go_prog, go_meshi,go_cours, role, o, f_r}) =
                 <List>
                     <Cell onClick={go_cours}>Мои курсы</Cell>
                     <Cell onClick={go_prog} >Мой прогресс</Cell>
-                    <Cell onClick={go_meshi}>Предложение от месхи</Cell>
                 </List>
             </Group>
         </Fragment>

@@ -12,7 +12,6 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 
 import Home from './panels/Home';
 import Intro from './panels/Intro';
-import Meshi from './panels/meshi';
 import Courses from './panels/Courses';
 import Progress from './panels/Prog';
 
@@ -20,7 +19,6 @@ import Progress from './panels/Prog';
 const ROUTES = {
     HOME: 'home',
     INTRO: 'intro',
-    MESHI: 'meshi',
     COURSES: 'courses',
     PROG: 'prog'
 
@@ -104,9 +102,6 @@ const App = () => {
     const go = panel => {
         setActivePanel(panel);
     };
-    const go_meshi = panel => {
-        setActivePanel(ROUTES.MESHI)
-    }
     const go_home = panel => {
         setActivePanel(ROUTES.HOME)
     }
@@ -158,12 +153,10 @@ const App = () => {
                     <Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} go={viewIntro} snackBarError={snackBar}
                            userHasSeeIntro={userHasSeeIntro}/>
 
-                    <Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go} go_prog={go_prog} go_cours={go_cours} go_meshi={go_meshi}
+                    <Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go} go_prog={go_prog} go_cours={go_cours} 
                           snackBarError={snackBar} role={role} o={setRole} f_r={false_role}/>
 
 
-
-                    <Meshi id={ROUTES.MESHI} go_home={go_home}/>
                     <Courses id={ROUTES.COURSES} go_home={go_home}/>
                     <Progress id={ROUTES.PROG} go_home={go_home}/>
 
