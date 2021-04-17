@@ -176,15 +176,13 @@ const App = () => {
 
                     <Home id={ROUTES.HOME} id_stud={ROUTES.STUD} id_pred={ROUTES.PRED} id_rod={ROUTES.ROD}
                           fetchedUser={fetchedUser} go={go} go_role={go_role} go_prog={go_prog} go_cours={go_cours}
-                          go_meshi={go_meshi}
                           snackBarError={snackBar} role={role} o={setRole} f_r={false_role}/>
 
 
-                    <Meshi id={ROUTES.MESHI} go_stud={go_stud}/>
                     <Courses_stud id={ROUTES.COURSES} go_stud={go_stud}/>
                     <Progress id={ROUTES.PROG} go_stud={go_stud}/>
 
-                    <Stud id={ROUTES.STUD} go_home={go_home} go_prog={go_prog} go_cours={go_cours} go_meshi={go_meshi}/>
+                    <Stud id={ROUTES.STUD} go_home={go_home} go_prog={go_prog} go_cours={go_cours}/>
                     <Pred id={ROUTES.PRED} go_home={go_home}/>
                     <Rod id={ROUTES.ROD} go_home={go_home}/>
 
