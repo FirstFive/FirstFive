@@ -1,5 +1,8 @@
 [<img width="134" src="https://vk.com/images/apps/mini_apps/vk_mini_apps_logo.svg">](https://vk.com/services)
 
+# Ссылка на Figma (полная версия нашего приложения):
+https://vk.com/away.php?to=https%3A%2F%2Fwww.figma.com%2Ffile%2F9QeXQZtPeF7v6t1zWtPnTq%2F%25D1%2585%25D0%25B0%25D1%2585%25D0%25B0%25D1%2582%25D0%25BE%25D0%25BD%3Fnode-id%3D0%253A1&cc_key=
+
 # Create VK Mini App [![npm][npm]][npm-url] [![deps][deps]][deps-url]
 
 ## How to use
