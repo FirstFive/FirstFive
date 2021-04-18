@@ -1,22 +1,28 @@
 import React, {Fragment} from 'react';
 
-import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
-import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
-import PanelHeaderBack from '@vkontakte/vkui/dist/components/PanelHeaderBack/PanelHeaderBack';
-import List from '@vkontakte/vkui/dist/components/List/List';
-import FormLayout from '@vkontakte/vkui/dist/components/FormLayout/FormLayout';
-import Radio from '@vkontakte/vkui/dist/components/Radio/Radio';
-
+import './css/logo.css'
 import './css/2.css';
-
-import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
-import FormItem from '@vkontakte/vkui/dist/components/FormItem/FormItem';
-import SliderSwitch from '@vkontakte/vkui/dist/components/SliderSwitch/SliderSwitch';
-import {Button, Div} from "@vkontakte/vkui";
-import FixedLayout from "@vkontakte/vkui/dist/components/FixedLayout/FixedLayout";
-
+import './home.css'
+import mascot from '../img/bear.png';
+import {
+    Button,
+    Title,
+    Div,
+    TooltipContainer,
+    Tooltip,
+    SliderSwitch,
+    Avatar,
+    FormItem,
+    FixedLayout,
+    Radio,
+    FormLayout,
+    Cell,
+    Group,
+    Separator,
+    PanelHeader,
+    Text,
+    Panel
+} from "@vkontakte/vkui";
 
 const Home = ({
                   id,
@@ -33,26 +39,20 @@ const Home = ({
                   f_r
               }) => (
     <Panel id={id}>
-
-        {fetchedUser &&
-
-        <Fragment>
-            <PanelHeader>
-                Начало работы
-            </PanelHeader>
-            <Group>
-                <Cell
-                    before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-                    description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-                >
-                    {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-                </Cell>
-            </Group>
-        </Fragment>}
-
         <Fragment>
 
             <Group>
+                <Div className='User'>
+                    <Title level="1" size='m' weight="bold"><h1>Coursel</h1></Title>
+
+
+                        <img className="Persik" src={mascot} alt="Mascot"/>
+
+                    <Title level="3" weight="bold"><h2>Добро пожаловать!</h2></Title>
+                    <Text weight="medium"  >Воспользуйтесь самым лучшим приложением
+                        для отслеживания активностей ваших детей!
+                        Для продолжения сделайте выбор ниже.</Text>
+                </Div>
                 {/*<SliderSwitch*/}
 
                 {/*    options=*/}
@@ -68,31 +68,35 @@ const Home = ({
                 {/*    }}*/}
                 {/*/>*/}
 
-                {role == ""}
                 <FormLayout>
                     <Div>
-                        <FormItem top="Кто вы?">
+                        <FormItem top="Выберите роль">
 
+                            <Div className='vibor' >
                             <Radio name="radio" value="rodit" defaultChecked onClick={event => o(event.target.value)}>
                                 Родитель
                             </Radio>
+                                <Separator style={{ margin: '12px 0' }} />
+
 
                             <Radio name="radio" value="stud" onClick={event => o(event.target.value)}>
                                 Ученик
                             </Radio>
+                                <Separator style={{ margin: '12px 0' }} />
 
                             <Radio name="radio" value="teach" onClick={event => o(event.target.value)}>
                                 Преподаватель
                             </Radio>
+                            </Div>
 
                         </FormItem>
                     </Div>
                 </FormLayout>
 
 
-                    <Button className="Button1" style={{fontsize: '70px'}} onClick={go_role({role})}>
+                <Button className="Button1" style={{fontsize: '70px'}} onClick={go_role({role})}>
 
-                    </Button>
+                </Button>
 
 
                 <h1>{role}</h1>
@@ -121,7 +125,6 @@ const Home = ({
         {/*        <List>*/}
         {/*            <Cell onClick={go_cours}>Мои курсы</Cell>*/}
         {/*            <Cell onClick={go_prog}>Мой прогресс</Cell>*/}
-        {/*            <Cell onClick={go_meshi}>Предложение от месхи</Cell>*/}
         {/*        </List>*/}
         {/*    </Group>*/}
         {/*</Fragment>*/}

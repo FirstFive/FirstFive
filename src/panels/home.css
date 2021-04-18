@@ -5,6 +5,20 @@
     justify-content: center;
     text-align: center;
 
-    background-color: black;
+    background-color: white;
+
+}
+.User{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.vibor{
+
+
+    background: rgba(0, 28, 61, 0.05);
 
 }

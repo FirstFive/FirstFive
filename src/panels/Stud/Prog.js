@@ -1,22 +1,51 @@
 import React, {Fragment} from 'react';
 
+import {Panel, Div, Progress, PanelHeader, PanelHeaderBack, Group, List, Cell} from '@vkontakte/vkui';
+import sh from "../Rod/sh.jpg";
+import basket from "../Pred/basketball.jpg";
+import prog from "../Rod/prog.jpg";
 
-import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
-import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
+import './stud.css'
 
-import PanelHeaderBack from '@vkontakte/vkui/dist/components/PanelHeaderBack/PanelHeaderBack';
-
-
-
-const Progress = ({id, go_stud}) => (
+const Progress_ = ({id, go_stud}) => (
     <Panel id={id}>
 
         <PanelHeader left={<PanelHeaderBack onClick={go_stud}/>}>
             Progress
         </PanelHeader>
 
+        <Div className='User'>
+            <Group>
+                <h4>Шахматы</h4>
+                <Div>
+                    <img
+                        src={sh}/>
+                    <Progress value={55}/>
+                </Div>
+            </Group>
+
+            <Group>
+                <h4>Баскетбол</h4>
+                <Div>
+                    <img
+                        src={basket}/>
+                    <Progress value={70}/>
+                </Div>
+            </Group>
+
+            <Group>
+                <h4>Программирование на Python</h4>
+                <Div>
+                    <img
+                        src={prog}/>
+                    <Progress value={100}/>
+                </Div>
+            </Group>
+
+        </Div>
+
     </Panel>
 );
 
 
-export default Progress;
+export default Progress_;

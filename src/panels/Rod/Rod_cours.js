@@ -1,22 +1,20 @@
 import React, {Fragment} from 'react';
 
 
-import  {Panel, Div, PanelHeader, PanelHeaderBack, Group, List, Cell, CardGrid, ContentCard} from '@vkontakte/vkui';
+import  {Panel,Div, PanelHeader, PanelHeaderBack, Group, List, Cell, CardGrid, ContentCard} from '@vkontakte/vkui';
 import basket from "../Pred/basketball.jpg";
 
-import './stud.css'
-
-const Courses_stud = ({id, go_stud}) => (
+const Rod_cours = ({id, go_rod}) => (
     <Panel id={id}>
 
-        <PanelHeader left={<PanelHeaderBack onClick={go_stud}/>}>
+        <PanelHeader left={<PanelHeaderBack onClick={go_rod}/>}>
             Courses
         </PanelHeader>
 
         <Fragment>
             <Group>
                 <Div className='User'>
-                    <h1>Мои курсы</h1>
+                    <h1>Курсы Вашего ребёнка</h1>
 
                     <CardGrid size="l">
 
@@ -24,8 +22,8 @@ const Courses_stud = ({id, go_stud}) => (
                             image={basket}
                             subtitle="Спорт"
                             header="Баскетбол"
-                            text="В детстве каждому из нас приходилось играть в баскетбол, будь это обычная игра с друзьями во дворе, либо школьный урок. В настоящее время именно детский баскетбол пользуется большой популярностью."
-                            maxHeight={450}
+                            text="В детстве каждому из нас приходилось играть в баскетбол, будь это обычная игра с друзьями во дворе, либо школьный урок. В настоящее время именно детский баскетбол пользуется большой популярностью. Конечно, по сравнению с признанием баскетбола в США и Европе, мы уступаем, но все же мы движемся к популяризации этого вида спорта. На сегодняшний день, секции детского баскетбола есть во многих спортивных учреждениях нашей страны. Их активность и масштабность возрастает с каждым днем. К сожалению, секции для более взрослых игроков являются редкостью, поэтому BallGames рад приветствовать Вас на секционных занятиях по баскетболу!!! Стань частью нашей огромной семьи!!!"
+                            maxHeight={250}
                         />
 
                         <ContentCard
@@ -81,4 +79,4 @@ const Courses_stud = ({id, go_stud}) => (
 );
 
 
-export default Courses_stud;
+export default Rod_cours;
